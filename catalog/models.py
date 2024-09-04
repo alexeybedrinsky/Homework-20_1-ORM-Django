@@ -31,12 +31,19 @@ class Product(models.Model):
         max_length=50, verbose_name="Стоимость", help_text="Цена за покупку"
     )
     created_at = models.DateField(
-        blank=True, verbose_name="Дата создания", help_text="Дата занесения в БД"
+        blank=True, verbose_name="Дата создания", help_text="Дата занесения в БД", auto_now_add=True
     )
     updated_at = models.DateField(
         blank=True,
         verbose_name="Дата последнего изменения",
         help_text="Дата последнего изменения в БД",
+        auto_now=True
+    )
+    manufactured_at = models.DateField(
+        blank=True,
+        verbose_name="Дата производства",
+        help_text="Дата производства продукта",
+        null=True
     )
 
     class Meta:
