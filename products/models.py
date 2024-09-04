@@ -13,7 +13,7 @@ class Product(models.Model):
         null=True
     )
     image_preview = models.ImageField(
-        upload_to="Product/photo",
+        upload_to="product/photo",
         blank=True,
         null=True,
         verbose_name="Превью товара",

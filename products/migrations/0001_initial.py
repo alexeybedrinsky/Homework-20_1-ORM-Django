@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name="Product",
+            name="product",
             fields=[
                 (
                     "id",
@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
                         blank=True,
                         help_text="Загрузите изображение товара",
                         null=True,
-                        upload_to="Product/photo",
+                        upload_to="product/photo",
                         verbose_name="Превью товара",
                     ),
                 ),
@@ -118,7 +118,7 @@ class Migration(migrations.Migration):
                         null=True,
                         on_delete=django.db.models.deletion.SET_NULL,
                         related_name="products",
-                        to="Products.category",
+                        to="products.category",
                     ),
                 ),
             ],
